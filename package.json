@@ -1,0 +1,31 @@
+{
+  "name": "@stewartml/aws-profile",
+  "version": "1.0.0",
+  "description": "Simple wrapper around aws-vault to add a local config file",
+  "author": "Stewart Everett",
+  "license": "ISC",
+  "dependencies": {
+    "command-join": "^3.0.0",
+    "rc-yaml": "^2.0.0",
+    "shelljs": "^0.8.3"
+  },
+  "bin": {
+    "aws-profile": "./index.js",
+    "awsp": "./index.js"
+  },
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stewartml/aws-profile.git"
+  },
+  "keywords": [
+    "aws",
+    "security",
+    "aws-vault"
+  ],
+  "bugs": {
+    "url": "https://github.com/stewartml/aws-profile/issues"
+  },
+  "homepage": "https://github.com/stewartml/aws-profile#readme"
+}
