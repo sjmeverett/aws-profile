@@ -1,6 +1,6 @@
 {
   "name": "@stewartml/aws-profile",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple wrapper around aws-vault to add a local config file",
   "author": "Stewart Everett",
   "license": "ISC",
