@@ -12,8 +12,6 @@ if (!which('aws-vault')) {
 
 const config = rc('awsprofile', {}, {});
 
-console.log(config);
-
 if (!config.profile) {
   console.error('No profile defined - place a .aws-projrc file somewhere');
   process.exit(2);
