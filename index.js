@@ -1,7 +1,8 @@
 #!/usr/bin/env node
-const { which, exec } = require('shelljs');
+const { which } = require('shelljs');
 const rc = require('rc-yaml');
 const { commandJoin } = require('command-join');
+const { execSync } = require('child_process');
 
 if (!which('aws-vault')) {
   console.error(
@@ -13,7 +14,7 @@ if (!which('aws-vault')) {
 const config = rc('awsprofile', {}, {});
 
 if (!config.profile) {
-  console.error('No profile defined - place a .aws-projrc file somewhere');
+  console.error('No profile defined - place a .awsprofile file somewhere');
   process.exit(2);
 }
 
@@ -29,4 +30,4 @@ if (args[0] === '--') {
 
 const cmd = commandJoin(args);
 
-exec(`aws-vault exec ${config.profile} -- ${cmd}`);
+execSync(`aws-vault exec ${config.profile} -- ${cmd}`, { stdio: 'inherit' });
